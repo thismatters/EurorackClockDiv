@@ -2,9 +2,12 @@
 
 This module reduces a clock signal by powers of two.
 
-This is an original design featuring a three-layer stackup with a front face, a layer for all the jacks, and a power/processing layer where all the SMD components are layed out.
+This is a hobbling together of elements featuring a three-layer stackup with a front face, a layer for all the jacks, and a power/processing layer where all the SMD components are layed out.
 
-As with other modules in this line, this mult features:
+The input clock signal is passed through a schmitt trigger which is lifted whole-cloth from the [Yusynth Clock divider](https://yusynth.net/Modular/EN/DIVIDER/index.html) from which the reset signal processing is also lifted.
+This module's function is distinct from the aforementioned Yusynth module in that it subdivides the clock by halves. The remainder of the circuit is a bog standard usage of the CD4040.
+
+As with other modules in this line, this clock divider features:
 * Polarity protection so that a backward power header doesn't fry anything (twin series schotty diodes: BAT54SL),
 * Full surface mount design.
 
